@@ -123,25 +123,6 @@ print(result['soak_time'])   # 浸泡时间（分钟）
 print(result['fix_time'])    # 固色时长（分钟）
 ```
 
----
-
-## 重要安全提醒
-
-> **`1.html` 中硬编码了 API 密钥，上传 GitHub 前务必处理！**
-
-`1.html` 文件第 396-398 行包含以下明文密钥：
-
-- SiliconFlow API Key（用于纹样生成）
-- DeepSeek API Key（用于染色配方咨询）
-
-### 处理建议
-
-1. **立即前往对应平台重置这些已泄露的密钥**（SiliconFlow 控制台 / DeepSeek 控制台）
-2. **不要将含密钥的 `1.html` 上传到 GitHub**。推荐方案：
-   - 创建 `.env` 文件存储密钥，并在 `1.html` 中通过环境变量 / 后端代理方式获取
-   - 将 `.env` 加入 `.gitignore`（本项目已配置）
-   - 提供 `1.example.html` 模板文件，密钥位置用占位符标记
-3. **如需保留 Web 界面上传**，建议改为后端中转方案：启动一个简单的 Python HTTP 服务，前端通过 `/api/*` 接口调用，密钥仅存于服务端
 
 ---
 
