@@ -1,0 +1,15 @@
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 虚拟环境
+venv/
+.venv/
+
+# IDE 文件
+.vscode/
+.idea/
+
+# 临时文件
+temp_capture.jpg
